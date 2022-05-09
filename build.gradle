@@ -1,5 +1,5 @@
 plugins {
-    id 'org.jetbrains.kotlin.jvm' version '1.5.10'
+    id 'org.jetbrains.kotlin.jvm' version '1.6.20'
 }
 
 group 'org.example'
@@ -10,8 +10,12 @@ repositories {
 }
 
 dependencies {
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.1'
     implementation "org.jetbrains.kotlin:kotlin-stdlib"
-    testImplementation 'org.jetbrains.kotlin:kotlin-test'
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm"
+    testImplementation "org.jetbrains.kotlin:kotlin-test"
+    testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.1'
+    testImplementation 'io.mockk:mockk:1.12.3'
 }
 
 test {
